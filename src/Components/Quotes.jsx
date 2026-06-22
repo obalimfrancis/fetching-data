@@ -15,19 +15,19 @@ useEffect(function(){
 },[])
 
     return(
-        <div>
+        <div className="quotesContainer">
             <h1>Quotes Page</h1>
 
             <div>
              {quotes.length === 0? (
-                <p>Loading quotes....</p>
+                <p className="loadingText">Loading quotes....</p>
              ) : (
-                <ul> 
+                <ul className="quoteList"> 
                     {quotes.map((item) =>(
                         
-                        <li key={item.id}> 
-                            <p>"{item.quote}"</p>
-                            <small>- {item.author}</small>
+                        <li key={item.id} className="quoteCard"> 
+                            <p className="quoteText">"{item.quote}"</p>
+                            <small className="quoteAuthor">- {item.author}</small>
                         </li>
                     )
                     )}
